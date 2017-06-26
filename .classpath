@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/jnotify-0.94.jar" sourcepath="C:/Users/Administrator/Desktop/jnotify/jnotify-0.94-src.zip"/>
+	<classpathentry kind="lib" path="lib/spring-aop-4.3.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-beans-4.3.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-4.3.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-core-4.3.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-expression-4.3.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

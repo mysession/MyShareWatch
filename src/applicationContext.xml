@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="shareDirectory" class="cn.mysession.core.JnotifyShareDirectory"></bean>
+	<bean id="show" class="cn.mysession.core.SystemShow"></bean>
+	
+	<bean id="copyFilePath" class="java.io.File">
+		<constructor-arg index="0" type="java.lang.String" value="拦截的文件在这里"></constructor-arg>
+	</bean>
+	<bean id="process" class="cn.mysession.myprocess.CopyProcess">
+		<constructor-arg index="0" type="java.io.File" ref="copyFilePath"></constructor-arg>
+		<property name="show" ref="show"></property>
+		<property name="nextProcess" ref="deleteProcess"></property>
+	</bean>
+	<bean id="deleteProcess" class="cn.mysession.myprocess.DeleteProcess">
+		<property name="show" ref="show"></property>
+		<property name="nextProcess" ref="logProcess"></property>
+	</bean>
+	<bean id="logProcess" class="cn.mysession.myprocess.LogProcess"></bean>
+	
+</beans>
